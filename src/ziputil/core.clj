@@ -6,8 +6,8 @@
 
 (defn create-zip-file
   "Write a compressed zip archive of `entries` to `output-file`. `entries` should
-   be a list of name/data pairs, where name is the name of the zipfile entry and
-   value anything that can be opened with clojure.java.io/input-stream. For
+   be a list of `name`/`data` pairs, where `name` is the name of the zipfile entry and
+   `data` anything that can be opened with clojure.java.io/input-stream. For
    example:
 
   (create-zip-file \"foo.zip\" \"file1.txt\" file1 \"file2.txt\" file2"
