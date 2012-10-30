@@ -10,7 +10,7 @@
    `data` anything that can be opened with clojure.java.io/input-stream. For
    example:
 
-  (create-zip-file \"foo.zip\" \"file1.txt\" file1 \"file2.txt\" file2"
+  (create-zip-file \"foo.zip\" \"file1.txt\" file1 \"file2.txt\" file2)"
   [output-file & entries]
   (when (odd? (count entries))
     (throw (IllegalArgumentException. "create-zip-file requires an even-numbered list of name/data pairs")))
