@@ -1,4 +1,4 @@
-(defproject ziputil "0.1.0-SNAPSHOT"
+(defproject ziputil "0.1.0"
   :description "Simple Clojure wrapper around java.util.zip"
   :url "http://github.com/ray1729/ziputil"
   :license {:name "Eclipse Public License"

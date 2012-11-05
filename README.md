@@ -2,6 +2,13 @@
 
 A simple Clojure wrapper anound java.util.zip for creating zip archives.
 
+## Installation
+
+Available from Clojars. Using Leiningen, include the following
+dependency in `project.clj`:
+
+    [ziputil "0.1.0"]
+
 ## Usage
 
     (use '[ziputil.core :only [create-archive] :as ziputil])
@@ -10,7 +17,7 @@ A simple Clojure wrapper anound java.util.zip for creating zip archives.
 
 Passing a :prefix option will add that prefix to the filenames in the archive:
 
-    (create-archive {:prefix "some/dir/"} "foo.zip" "file1.txt" file1 "file2.txt" file2)
+    (create-archive "foo.zip" {:prefix "some/dir/"} "file1.txt" file1 "file2.txt" file2)
 
 is equivalent to:
 
@@ -18,7 +25,7 @@ is equivalent to:
 
 The compression level may also be specified in the options:
 
-    (create-archive {:compression-level ziputil/best-compression} "foo.zip" "file1.txt" file1 "file2.txt" file2)
+    (create-archive "foo.zip" {:compression-level ziputil/best-compression} "file1.txt" file1 "file2.txt" file2)
 
 ## See Also
 
